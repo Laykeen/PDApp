@@ -1,9 +1,12 @@
+import plugin from 'tailwindcss';
+
 /** @type {import('tailwindcss').Config}*/
 const config = {
   content: [
+    "./index.html",
     "./src/**/*.{html,js,svelte,ts}"
   ],
-
+  darkMode: 'class',
   theme: {
     extend: {
       '13': '3.25rem',
@@ -13,7 +16,11 @@ const config = {
     },
   },
 
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+
+    })
+  ],
 };
 
 module.exports = config;
